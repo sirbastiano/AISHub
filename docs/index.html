@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhiLab-AISPortal</title>
+    <meta
+      name="description"
+      content="PhiLab-AISPortal provides structured, daily AIS data access and lightweight utilities for EO and maritime analytics."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="PhiLab AISPortal home">
+          <img
+            src="assets/img/ESAΦ-lab_WT.png"
+            alt="ESA Phi-lab logo"
+            class="brand-logo"
+          />
+          <span>Φ-lab AIS Portal</span>
+        </a>
+        <nav aria-label="Primary" class="site-nav">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#coverage">Coverage</a>
+          <a class="nav-link" href="#mission">Mission</a>
+          <a class="nav-link" href="#data-access">Data Access</a>
+          <a class="nav-link" href="#use-cases">Use Cases</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero section">
+        <div class="container hero-shell">
+          <p class="eyebrow">ESA Φ-lab mission hub</p>
+          <h1>PhiLab-AISPortal</h1>
+          <p class="lead">
+            ESA Φ-lab accelerates the future of Earth Observation (EO) through disruptive,
+            transformational innovations and commercialisation actions. Our mission is to enhance
+            the global competitiveness of the industrial and scientific sectors across ESA Member
+            States. We are the innovation catalyst that transforms brilliant ideas into real-world
+            solutions that benefit humanity.
+          </p>
+          <p class="subtitle">
+            This data access provides globally collected Automatic Identification System (AIS) data,
+            structured and organized on a daily basis for consistent access and analysis.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container" target="_blank" rel="noopener noreferrer">Explore AIS app</a>
+            <a class="button button-outline" href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container" target="_blank" rel="noopener noreferrer">Open AIS app</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="mission" class="section light">
+        <div class="container">
+          <h2>What is AISHub?</h2>
+          <p>
+            AISHub is a structured AIS data platform that organizes global vessel movement observations
+            into daily, consistent datasets. It simplifies development and analysis for teams needing
+            reliable marine traffic information in Earth Observation workflows.
+          </p>
+        </div>
+      </section>
+
+      <section id="coverage" class="section">
+        <div class="container">
+          <h2>Global AIS coverage</h2>
+          <p>
+            Explore global marine coverage and vessel-route activity patterns over a world map view.
+            The map below provides a quick contextual view of coverage zones and
+            maritime activity hotspots used in our processing.
+          </p>
+          <div class="map-wrap" role="region" aria-label="Static world map with illustrative AIS activity markers">
+            <div class="map-frame">
+              <img
+                class="world-map"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/BlankMap-World.svg/1280px-BlankMap-World.svg.png"
+                alt="Simplified world map used as a background for AIS route visualization."
+                loading="lazy"
+              />
+              <svg class="world-overlay" viewBox="0 0 960 500" role="presentation" aria-hidden="true">
+                <defs>
+                  <filter id="routeShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="1.8" flood-color="#0d3e90" flood-opacity="0.45" />
+                  </filter>
+                </defs>
+                <circle class="route-dot" cx="92" cy="212" r="7" />
+                <circle class="route-dot" cx="184" cy="190" r="7" />
+                <circle class="route-dot" cx="262" cy="248" r="7" />
+                <circle class="route-dot route-dot-alt" cx="360" cy="312" r="7" />
+                <circle class="route-dot" cx="458" cy="252" r="7" />
+                <circle class="route-dot route-dot-alt" cx="610" cy="285" r="7" />
+                <circle class="route-dot" cx="742" cy="300" r="7" />
+                <circle class="route-dot route-dot-alt" cx="814" cy="325" r="7" />
+                <circle class="route-dot" cx="880" cy="210" r="7" />
+                <circle class="route-dot route-dot-alt" cx="910" cy="340" r="7" />
+                <circle class="route-dot" cx="520" cy="430" r="7" />
+                <circle class="route-dot route-dot-alt" cx="610" cy="150" r="7" />
+              </svg>
+            </div>
+            <ul class="map-legend" aria-label="Legend">
+              <li><span class="dot dot-main"></span> AIS activity hotspots across major oceans</li>
+              <li><span class="dot dot-alt"></span> Secondary maritime concentration zones</li>
+            </ul>
+          </div>
+
+          <p class="map-link">
+            For live, interactive AIS visualization, open the application on Hugging Face:
+            <a href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container" target="_blank" rel="noopener noreferrer">
+              Launch AIS app
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section id="data-access" class="section">
+        <div class="container">
+          <h2>Core capabilities</h2>
+          <p>
+            Lightweight, practical building blocks are designed for fast integration and reproducible
+            maritime analysis pipelines.
+          </p>
+          <div class="cards" role="list" aria-label="AISHub core capabilities">
+            <article class="card" role="listitem">
+              <h3>Daily AIS data organization</h3>
+              <p>Consistent structuring and daily indexing support dependable repeatability.</p>
+            </article>
+            <article class="card" role="listitem">
+            <h3>Direct web application access</h3>
+            <p>The deployed Hugging Face application exposes daily AIS workflows through a practical interface.</p>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Utilities for fetch + normalization</h3>
+              <p>Helpers for downloading, cleansing, and harmonizing schema details for pilots.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="use-cases" class="section light">
+        <div class="container two-col">
+          <div>
+            <h2>Why it matters</h2>
+            <p>
+              ESA-linked EO and maritime innovation benefits from timely vessel context. The platform
+              can support risk detection, compliance monitoring, and logistics optimization with
+              transparent, consistent AIS inputs.
+            </p>
+          </div>
+          <ul class="bullets" aria-label="Use case examples">
+            <li>Integrate maritime anomaly detection with satellite-derived alerts.</li>
+            <li>Track route efficiencies and congestion around ports.</li>
+            <li>Correlate vessel tracks with climate and surface observation products.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Get started</h2>
+          <p>
+            Open the deployed application and start exploring daily AIS outputs through the web interface.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container" target="_blank" rel="noopener noreferrer">Open AIS app</a>
+            <a class="button button-outline" href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container" target="_blank" rel="noopener noreferrer">Launch app</a>
+            <a class="button button-outline" href="mailto:contact@philaishub.example">Contact us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="assets/img/ESAΦ-lab_WT.png"
+            alt="ESA Φ-lab logo"
+            class="brand-logo footer-logo"
+          />
+          <p>© <span id="year"></span> PhiLab AISHub. All rights reserved.</p>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="https://huggingface.co/spaces/sirbastiano94/AIS?logs=container">AIS app</a>
+          <a href="mailto:contact@philaishub.example">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
